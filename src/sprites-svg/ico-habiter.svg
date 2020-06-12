@@ -1,0 +1,8 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+  <title>ico-habiter</title>
+  <g>
+    <polygon points="22 5 22 2 16.53 2 13.51 0 0 7.99 26 8 22 5"/>
+    <polygon points="11 19 11 26 15 26 15 18 12 18 11 19"/>
+    <path d="M2,9V26h8c0-.11,0-8,0-8l1-1h5v9h8V9ZM5.59,22H3.48V20H5.59Zm0-3H3.48V17H5.59Zm3,3H6.48V20H8.59Zm0-3H6.48V17H8.59Zm11,3H17.48V20h2.11Zm0-3H17.48V17h2.11Zm3,3H20.48V20h2.11Zm0-3H20.48V17h2.11Z" transform="translate(0)"/>
+  </g>
+</svg>

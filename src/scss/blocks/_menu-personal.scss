@@ -1,0 +1,180 @@
+$menu-personal-width:  19.144%;
+$menu-personal-height: 45px;
+
+.menu-personal
+{
+    @include size( $page-def-width );
+
+    margin:           auto;
+    display:          flex;
+    justify-content:  flex-end;
+
+} // .menu-personal
+
+.menu-personal__main
+{
+    @include size( $menu-personal-width, $menu-personal-height );
+    @include pos-rel( null, null, null, null, null );
+
+    background-color: #db0032;
+    margin:           -$menu-personal-height 0 0 0;
+    font-family:      'HelveticaNeueLTStd-Bd';
+    font-size:        14px;
+    line-height:      120%;
+    text-transform:   uppercase;
+    color:            rgba( 255, 255, 255, 1 );
+    cursor:           pointer;
+    display:          flex;
+    align-items:      center;
+    justify-content:  center;
+    fill:             rgba( 255, 255, 255, 1 );
+    transition:       $ani-speed-02s-base color, $ani-speed-02s-base fill;
+
+    svg
+    {
+        @include size( 18px, 18px );
+
+        transform-origin: 50% 50%;
+        transform:        rotate3d( 0, 0, 1, 90deg );
+        margin:           0 0 0 3px;
+        transition:       $ani-speed-05s-base transform;
+
+    } // svg
+
+    &:hover
+    {
+        color: rgba( 255, 255, 255, 0.8 );
+        fill:  rgba( 255, 255, 255, 0.8 );
+    }
+
+    .menu-personal__main--opened &
+    {
+        svg
+        {
+            transform: rotate3d( 0, 0, 1, -90deg );
+
+        } // svg
+
+    } // .menu-personal__main--opened &
+
+} // .menu-personal__main
+
+.menu-personal__btn
+{
+    @include size( 100%, 100% );
+    @include pos-abs( 0, 0, 0, 0, 5 );
+
+} // .menu-personal__btn
+
+.menu-personal__submenu
+{
+    @include pos-abs( 0, 100%, 0, null, 1 );
+    @include size( 100% );
+
+    background-color: #cecece;
+    box-sizing:       border-box;
+    padding:          12px;
+    transform-origin: 50% 0;
+    transform:        scale3d( 1, 0, 1 );
+    transition:       $ani-speed-025s-base transform;
+
+    input[type=text],
+    input[type=email],
+    input[type=password]
+    {
+        @include size( 100% );
+    }
+
+    input[type=button]
+    {
+        @extend .btn-blue;
+        @include size( 100% );
+
+    } // input[type=button]
+
+    .form-item-text,
+    .form-item-email,
+    .form-item-password
+    {
+        margin: 0 0 10px;
+
+    } // .form-item-email
+
+    .form-item-error
+    {
+        margin:  -6px 0 0;
+        padding: 0 0 8px;
+
+    } // .form-item-error
+
+    .form-item-button-login
+    {
+        input[type=button]
+        {
+            padding: 7px 13px 6px;
+
+        } // input[type=button]
+
+    } // .form-item-button-login
+
+    .form-item-button-cart
+    {
+        margin: 0 0 10px;
+
+    } // .form-item-button-cart
+
+    .form-item-button-logout
+    {
+        input[type=button]
+        {
+            @extend .btn-red;
+
+            padding: 7px 13px 6px;
+
+        } // input[type=button]
+
+    } // .form-item-button-logout
+
+    .menu-personal__main--opened &
+    {
+        transform: scale3d( 1, 1, 1 );
+
+    } // .menu-personal__main--opened &
+
+} // .menu-personal__submenu
+
+.menu-personal__submenu-title
+{
+    font-family:    'HelveticaNeueLTStd-Bd';
+    font-size:      18px;
+    font-weight:    normal;
+    line-height:    120%;
+    color:          #1d1d1b;
+    text-align:     center;
+    text-transform: none;
+    margin:         0 0 8px;
+
+} // .menu-personal__submenu-title
+
+.menu-personal__forgot-pass
+{
+    padding: 2px 0 0;
+    margin:  0 0 15px;
+
+    a
+    {
+        font-family:     Arial, Helvetica, sans-serif;
+        font-size:       12px;
+        line-height:     120%;
+        color:           #1d1d1b;
+        text-decoration: underline;
+        text-transform:  none;
+
+        &:hover
+        {
+            text-decoration: none;
+        }
+
+    } // a
+
+} // .menu-personal__forgot-pass

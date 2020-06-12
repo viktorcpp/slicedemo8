@@ -1,0 +1,55 @@
+@mixin btn-base
+{
+    display:          block;
+    font-family:      'HelveticaNeueLTStd-Bd';
+    font-weight:      normal;
+    font-size:        14px;
+    line-height:      120%;
+    color:            #fff;
+    text-transform:   uppercase;
+    text-decoration:  none;
+    border:           none;
+    background-color: transparent;
+    padding:          13px;
+    text-align:       center;
+    overflow:         hidden;
+    text-overflow:    ellipsis;
+    transition:       $ani-speed-025s-base background;
+
+} // @mixin btn-base
+
+@mixin btn-blue-base
+{
+    background-color: #007ba9;
+
+    &:hover
+    {
+        background-color: #008cc1;
+    }
+
+} // @mixin btn-blue-base
+
+@mixin btn-red-base
+{
+    background-color: #db0032;
+
+    &:hover
+    {
+        background-color: #db0032;
+    }
+
+} // @mixin btn-red-base
+
+.btn-blue
+{
+    @include btn-base;
+    @include btn-blue-base;
+
+} // .btn-blue
+
+.btn-red
+{
+    @include btn-base;
+    @include btn-red-base;
+
+} // .btn-red

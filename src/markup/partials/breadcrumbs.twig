@@ -1,0 +1,24 @@
+<div class="breadcrumbs">
+    <ul class="breadcrumbs__nav">
+        {% for item in bc_list %}
+            {% if loop.last %}
+                <li>{{ item }}</li>
+            {% else %}
+                <li><a href="#">{{ item }}</a> ></li>
+            {% endif %}
+        {% endfor %}
+    </ul> <!-- /breadcrumbs__nav -->
+
+    {% if bc_show_back == 1 %}
+    <a href="#" class="breadcrumbs__back">
+        <svg preserveAspectRatio="xMidYMid meet">
+            <use xlink:href="/images/sprite.svg#ico-arrow-next-bold"></use>
+        </svg>
+        retour aux résultats
+    </a>
+    {% endif %}
+
+</div> <!-- /breadcrumbs -->
+
+{% set bc_list      = '' %}
+{% set bc_show_back = 0 %}

@@ -1,0 +1,39 @@
+.logo
+{
+    display:         flex;
+    text-decoration: none;
+    color:           #1d1d1b;
+
+    svg
+    {
+        @include size( 52px, 52px );
+
+        float: left;
+
+    } // svg
+
+} // .logo
+
+.logo__lbl
+{
+    padding: 0 0 0 9px;
+
+} // .logo__lbl
+
+.logo__lbl1
+{
+    font-family: 'HelveticaNeueLTStd-Bd';
+    line-height: 120%;
+    font-size:   24px;
+    margin:      -2px 0 0;
+
+} // .logo__lbl1
+
+.logo__lbl2
+{
+    font-family: 'HelveticaNeueLTStd-Th';
+    line-height: 120%;
+    font-size:   19px;
+    margin:      -1px 0 0;
+
+} // .logo__lbl2

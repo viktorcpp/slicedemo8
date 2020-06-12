@@ -1,0 +1,29 @@
+.product-main
+{
+    @include size( 100%, 437px );
+
+    display:         flex;
+    align-items:     stretch;
+    align-content:   stretch;
+    justify-content: stretch;
+
+} // .product-main
+
+.product-main__left
+{
+    flex: 0 0 48.95%;
+
+} // .product-main__left
+
+.product-main__center
+{
+    flex: 1 1 31.91%;
+
+} // .product-main__center
+
+.product-main__right
+{
+    flex:             0 0 19.14%;
+    background-color: #e0e0dd;
+
+} // .product-main__right

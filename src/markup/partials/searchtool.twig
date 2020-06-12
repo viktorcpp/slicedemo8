@@ -1,0 +1,72 @@
+<div class="searchtool">
+    <div class="tabs">
+        <div class="tabs__btn tabs__btn--active" data-mtabs="searchtool-grp01" data-mtabs-page="searchtool-page-1">
+            <svg preserveAspectRatio="xMidYMid meet">
+                <use xlink:href="/images/sprite.svg#ico-habiter"></use>
+            </svg>
+            habiter
+        </div>
+        <div class="tabs__btn" data-mtabs="searchtool-grp01" data-mtabs-page="searchtool-page-2">
+            <svg preserveAspectRatio="xMidYMid meet">
+                <use xlink:href="/images/sprite.svg#ico-investir"></use>
+            </svg>
+            investir
+        </div>
+    </div> <!-- /tabs -->
+    <div class="pages">
+        <div class="pagecont active" data-mpage="searchtool-page-1">
+
+            <div class="searchtool__habiter">
+
+                <div class="habiter__left">
+                    <div class="habiter__form">
+                        <form action="#" method="post">
+                        <div class="habiter__form-title">
+                            <strong>Habiter</strong> dans le neuf
+                        </div>
+                        <div class="form-item form-item-text">
+                            <label for="habiter-temp1">Localisation</label>
+                            <input type="text" class="form-text" placeholder="Ville, département, code postal" id="habiter-temp1">
+                        </div>
+                        <div class="form-item form-item-text">
+                            <label for="habiter-temp2">Budget</label>
+                            <input type="text" class="form-text" placeholder="150 000 € max" id="habiter-temp2">
+                        </div>
+                        <div class="form-item form-item-text">
+                            <label for="habiter-temp3">Nombre de pièces</label>
+                            <input type="text" class="form-text" placeholder="5 pièces et +" id="habiter-temp3">
+                        </div>
+                        <div class="habiter__results">
+                            <strong>50</strong> résultats
+                        </div>
+                        <div class="form-item form-item-submit">
+                            <input type="submit" class="form-submit" value="Rechercher">
+                        </div>
+                        <div class="habiter__marker">
+                            <svg preserveAspectRatio="xMidYMid meet">
+                                <use xlink:href="/images/sprite.svg#ico-triangle-equal"></use>
+                            </svg>
+                        </div>
+                        </form>
+                    </div> <!-- /habiter__form -->
+                </div> <!-- /habiter__left -->
+                <div class="habiter__right">
+                    <div class="habiter__map">
+                        <div class="habiter__map-title">
+                            <strong>Rechercher</strong> par région
+                            <span class="sub">Ile de France</span>
+                        </div>
+                        {% include 'habiter-map.twig' %}
+                    </div> <!-- /habiter__map -->
+                </div> <!-- /habiter__right -->
+
+            </div> <!-- /searchtool__habiter -->
+
+        </div> <!-- /pagecont -->
+        <div class="pagecont" data-mpage="searchtool-page-2">
+
+            Coming soon...
+
+        </div> <!-- /pagecont -->
+    </div> <!-- /pages -->
+</div> <!-- /searchtool -->

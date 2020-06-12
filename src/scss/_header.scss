@@ -1,0 +1,49 @@
+
+header
+{
+    //
+    
+} // header
+
+.header__main
+{
+    //
+
+} // .header__main
+
+.header__bot
+{
+    background-color: #fff;
+
+} // .header__bot
+
+.header__bot-main
+{
+    @include size( $page-def-width );
+
+    margin:          auto;
+    height:          117px;
+    display:         flex;
+    align-items:     stretch;
+    align-content:   stretch;
+    justify-content: stretch;
+
+} // .header__bot-main
+
+.header__bot-left
+{
+    flex:            0 0 33.199%;
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+
+} // .header__bot-left
+
+.header__bot-right
+{
+    flex:            1 0 auto;
+    display:         flex;
+    align-items:     center;
+    justify-content: flex-end;
+
+} // .header__bot-right

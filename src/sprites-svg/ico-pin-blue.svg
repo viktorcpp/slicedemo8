@@ -1,0 +1,20 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 41 54">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-274.62" y1="418.22" x2="-274.62" y2="419.22" gradientTransform="matrix(41, 0, 0, -54, 11282, 22640)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <title>ico-pin</title>
+  <path d="M22.5,2A20.54,20.54,0,0,1,43,22.57C43,33.93,26.34,56,22.5,56S2,33.93,2,22.57A20.54,20.54,0,0,1,22.5,2Z" transform="translate(-2 -2)" fill="#007ba9" fill-rule="evenodd"/>
+  <path d="M22.5,2A20.54,20.54,0,0,1,43,22.57C43,33.93,26.34,56,22.5,56S2,33.93,2,22.57A20.54,20.54,0,0,1,22.5,2Z" transform="translate(-2 -2)" fill="url(#linear-gradient)"/>
+  <path d="M22.5,7.14A15.43,15.43,0,1,1,7.13,22.57,15.41,15.41,0,0,1,22.5,7.14Z" transform="translate(-2 -2)" fill="#fff"/>
+  <polygon points="17.84 23.16 23.16 28.47 28.47 23.16 28.47 17.84 23.16 17.84 23.16 23.16 17.84 23.16" fill="#00b0e3"/>
+  <polygon points="23.16 17.84 17.84 23.16 23.16 23.16 23.16 17.84" fill="#007baa"/>
+  <polygon points="17.84 23.16 20.5 25.81 17.84 28.47 12.53 23.16 17.84 23.16" fill="#c7d301"/>
+  <polygon points="12.53 23.16 17.84 17.84 17.84 23.16 12.53 23.16" fill="#818b03"/>
+  <polygon points="17.84 17.84 17.84 23.16 23.16 17.84 17.84 17.84" fill="#c7d301"/>
+  <rect x="17.84" y="12.53" width="5.31" height="5.31" fill="#e4022e"/>
+  <path d="M19.84,19.84,17.19,22.5l-2.66-2.66Z" transform="translate(-2 -2)" fill="#e4022e"/>
+  <polygon points="17.84 12.53 17.84 17.84 12.53 17.84 17.84 12.53" fill="#9d0d1c"/>
+</svg>

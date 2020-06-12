@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 51">
+  <title>logo</title>
+  <polygon points="17 34 34 51 51 34.01 51 16.99 34 16.99 34 34 17 34" fill="#00b0e3"/>
+  <polygon points="34 16.99 17 34 34 34 34 16.99" fill="#007baa"/>
+  <polygon points="17 34 25.5 42.5 17 51 0 34 17 34" fill="#c7d301"/>
+  <polygon points="0 34 17 16.99 17 34 0 34" fill="#818b03"/>
+  <polygon points="17 16.99 17 34 34 16.99 17 16.99" fill="#c7d301"/>
+  <rect x="17" width="17" height="16.99" fill="#e4022e"/>
+  <path d="M17,17,8.5,25.5,0,17Z" fill="#e4022e"/>
+  <polygon points="17 0 17 16.99 0 16.99 17 0" fill="#9d0d1c"/>
+</svg>

@@ -1,0 +1,26 @@
+{% extends "partials/base-page-template.twig" %}
+{% block content %}
+    <div class="page__main">
+        {% include 'partials/header.twig' %}
+        <section class="content">
+            <div class="content__main">
+
+                <div class="row1x1 back-white">
+                    <div class="cont">
+                        {% set bc_list = [ 'Accueil', 'Trouver un logement', 'Appartement Vaulx-en-Velin' ] %}
+                        {% set bc_show_back = '1' %}
+                        {% include 'partials/breadcrumbs.twig' %}
+                    </div>
+                </div> <!-- /row1x1 -->
+
+                <div class="row1x1 back-gray-light">
+                    <div class="cont">
+                        {% include 'partials/product-main.twig' %}
+                    </div>
+                </div>
+
+            </div><!-- /content__main -->
+        </section>
+        {% include 'partials/footer.twig' %}
+    </div> <!-- /page__main -->
+{% endblock %}

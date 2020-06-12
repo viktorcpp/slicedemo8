@@ -1,0 +1,145 @@
+
+html, body
+{
+    display:    block;
+    min-height: 100%;
+    margin:     0;
+    padding:    0;
+}
+
+html
+{
+    //
+
+} // html
+
+body
+{
+    min-height:       100vh;
+    max-width:        100%;
+    overflow-x:       hidden;
+    overflow-y:       auto;
+    background-color: #f0f0ed;
+
+} // body
+
+.page
+{
+    width:            100%;
+    display:          flex;
+    flex-flow:        row;
+    align-items:      stretch;
+    align-content:    stretch;
+    min-height:       100vh;
+    transform-origin: 0 0;
+    transition:       0.5s transform-origin ease-in-out;
+
+} // .page
+
+.page__main
+{
+    width: 100%;
+
+} // .page__main
+
+.cont
+{
+    @include size( $page-def-width );
+
+    margin: auto;
+
+} // .cont
+
+.row1x1
+{
+    .cont
+    {
+        display:         flex;
+        align-content:   stretch;
+        align-items:     stretch;
+        justify-content: stretch;
+
+    } // .cont
+
+} // .row1x1
+
+.row2x2
+{
+    .cont
+    {
+        display:         flex;
+        align-content:   stretch;
+        align-items:     stretch;
+        justify-content: stretch;
+
+    } // .cont
+
+    .col
+    {
+        flex: 1 1 50%;
+
+    } // .col
+
+} // .row2x2
+
+.row3x2
+{
+    .cont
+    {
+        display:       flex;
+        align-content: stretch;
+        align-items:   stretch;
+
+    } // .cont
+
+    .col
+    {
+        flex: 1 1 38.288%;
+
+    } // .col
+
+    .col-left
+    {
+        flex: 1 0 61.712%;
+
+    } // .col-left
+
+} // .row3x2
+
+.back-gray
+{
+    background-color: #cecece;
+
+} // .back-gray
+
+.back-gray-light
+{
+    background-color: #f0f0ed;
+
+} // .back-gray-light
+
+.back-white
+{
+    background-color: #fff;
+
+} // .back-white
+
+.back-brown
+{
+    background-color: #524746;
+
+} // .back-brown
+
+.link-readmore
+{
+    color:           #007ba9;
+    text-transform:  uppercase;
+    text-decoration: none;
+    transition:      $ani-speed-02s-base color;
+
+    &:hover
+    {
+        color: #000;
+    }
+
+} // .link-readmore

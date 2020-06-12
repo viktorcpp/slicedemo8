@@ -1,0 +1,52 @@
+{% extends "partials/base-page-template.twig" %}
+{% block content %}
+    <div class="page__main">
+        {% include 'partials/header.twig' %}
+        <section class="content">
+            <div class="content__main">
+
+                <div class="row2x2 back-gray">
+                    <div class="cont">
+                        <div class="col">
+                            {% include 'partials/searchtool.twig' %}
+                        </div>
+                        <div class="col">
+                            {% set slider_class = 'slider-home-top' %}
+                            {% include 'partials/slider-1.twig' %}
+                        </div>
+                    </div>
+                </div>
+
+                {% include 'partials/propositions.twig' %}
+
+                <div class="row3x2 back-white">
+                    <div class="cont">
+                        <div class="col col-left">
+                            {% include 'partials/news.twig' %}
+                        </div>
+                        <div class="col">
+                            {% include 'partials/tools.twig' %}
+                            {% include 'partials/tools-search.twig' %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row2x2 back-brown">
+                    <div class="cont">
+                        <div class="col">
+                            {% include 'partials/insurance.twig' %}
+                        </div>
+                        <div class="col">
+                            {% set slider_class = 'slider-home-bot' %}
+                            {% include 'partials/slider-2.twig' %}
+                        </div>
+                    </div>
+                </div>
+
+                {% include 'partials/navfull.twig' %}
+
+            </div><!-- /content__main -->
+        </section>
+        {% include 'partials/footer.twig' %}
+    </div> <!-- /page__main -->
+{% endblock %}

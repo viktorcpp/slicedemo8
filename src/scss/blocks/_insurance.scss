@@ -1,0 +1,80 @@
+.insurance
+{
+    @include size( 100%, 680px );
+
+    background-color: #524746;
+    box-sizing:       border-box;
+    padding:          35px 60px 0 52px;
+
+} // .insurance
+
+.insurance__title
+{
+    font-family: 'HelveticaNeueLTStd-Th';
+    font-size:   42px;
+    line-height: 120%;
+    color:       #fff;
+    padding:     30px 0 0;
+    margin:      0 0 66px;
+
+} // .insurance__title
+
+.insurance__services
+{
+    //
+
+} // .insurance__services
+
+.insurance__item
+{
+    display: flex;
+    margin:  0 0 46px;
+
+} // .insurance__item
+
+.insurance__ico
+{
+    @include size( 79px, 79px );
+
+    background-color: #1d1d1b;
+    fill:             #fff;
+    display:          flex;
+    align-items:      center;
+    justify-content:  center;
+    float:            left;
+    flex:             0 0 auto;
+    margin:           0 25px 0 0;
+
+    svg
+    {
+        @include size( 50%, 50% );
+
+    } // svg
+
+} // .insurance__ico
+
+.insurance__desc
+{
+    flex: 1 1 auto;
+
+} // .insurance__desc
+
+.insurance__sub
+{
+    font-family: 'HelveticaNeueLTStd-Md';
+    font-size:   18px;
+    line-height: 120%;
+    color:       #fff;
+    margin:      0 0 6px;
+
+} // .insurance__sub
+
+.insurance__text
+{
+    font-family: 'HelveticaNeueLTStd-Th';
+    font-size:   14px;
+    line-height: 120%;
+    color:       #fff;
+    text-align:  justify;
+
+} // .insurance__text

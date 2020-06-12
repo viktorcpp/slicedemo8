@@ -1,0 +1,124 @@
+.propositions
+{
+    background-color: #f0f0ed;
+
+} // .propositions
+
+.propositions__inner
+{
+    @include size( $page-def-width );
+
+    margin:          auto;
+    display:         flex;
+    flex-flow:       column;
+    align-content:   stretch;
+    align-items:     stretch;
+    justify-content: stretch;
+
+} // .propositions__inner
+
+.propositions__title
+{
+    font-family: 'HelveticaNeueLTStd-Th';
+    font-size:   42px;
+    line-height: 120%;
+    color:       #1d1d1b;
+    text-align:  center;
+    padding:     39px 20px 16px;
+
+} // .propositions__title
+
+.propositions__items
+{
+    display:         flex;
+    justify-content: center;
+
+} // .propositions__items
+
+.propositions__item
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color:       #1d1d1b;
+    max-width:   342px;
+    margin:      0 26px;
+
+} // .propositions__item
+
+.propositions__item-title
+{
+    font-family:    'HelveticaNeueLTStd-Bd';
+    font-size:      18px;
+    line-height:    120%;
+    color:          #db0032;
+    text-transform: uppercase;
+    padding:        16px 0 11px;
+
+} // .propositions__item-title
+
+.propositions__item-image
+{
+    max-width:  342px;
+    max-height: 223px;
+    margin:     0 0 30px;
+
+    img
+    {
+        display:   block;
+        max-width: 100%;
+
+    } // img
+
+} // .propositions__item-image
+
+.propositions__item-name
+{
+    font-size:   14px;
+    line-height: 120%;
+
+} // .propositions__item-name
+
+.propositions__item-loc
+{
+    font-family: 'HelveticaNeue-Medium';
+    font-size:   18px;
+    line-height: 120%;
+    margin:      -1px 0 5px;
+
+    svg
+    {
+        @include size( 17px, 21px );
+        @include pos-rel( null, 4px, null, null, null );
+
+    } // svg
+
+} // .propositions__item-loc
+
+.propositions__item-price
+{
+    font-size:   16px;
+    line-height: 120%;
+    margin:      0 0 6px;
+
+    strong
+    {
+        font-family: 'HelveticaNeue-Medium';
+        color:       #db0032;
+
+    } // strong
+
+} // .propositions__item-price
+
+.propositions__item-desc
+{
+    font-size:   14px;
+    line-height: 120%;
+    color:       #5d5d59;
+    margin:      0 0 24px;
+
+} // .propositions__item-desc
+
+.propositions__item-btn
+{
+    padding: 0 0 33px;
+
+} // .propositions__item-btn

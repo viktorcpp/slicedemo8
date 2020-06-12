@@ -1,0 +1,143 @@
+.slider
+{
+    @include pos-rel( null, null, null, null, 0 );
+
+    display:         flex;
+    align-content:   stretch;
+    align-items:     stretch;
+    justify-content: stretch;
+
+} // .slider
+
+.slider-home-top
+{
+    height: 515px;
+
+} // .slider-home-top
+
+.slider-home-bot
+{
+    height: 680px;
+
+    .slider__direction-prev,
+    .slider__direction-next
+    {
+        display: none;
+    }
+
+} // .slider-home-bot
+
+.slider__cont
+{
+    @include pos-abs( 0, 0, 0, 0, 0 );
+
+    overflow:      hidden;
+    display:       flex;
+    align-items:   stretch;
+    align-content: stretch;
+
+} // .slider__cont
+
+.slider__viewport
+{
+    @include size( 100000%, auto );
+
+    flex:          1 0 100000%;
+    display:       flex;
+    align-content: stretch;
+    align-items:   stretch;
+    margin:        0;
+    transition:    $ani-speed-05s-base margin;
+
+    li
+    {
+        //
+
+    } // li
+
+} // .slider__viewport
+
+.slider__pager
+{
+    @include pos-abs( 0, null, 0, 19px, 2 );
+    @include size( 100%, 0 );
+
+    line-height:     0;
+    font-size:       0;
+    display:         flex;
+    align-items:     flex-end;
+    justify-content: center;
+
+    li
+    {
+        @include size( 14px, 14px );
+
+        display:          inline-block;
+        background-color: #fff;
+        border-radius:    50%;
+        margin:           0 13px;
+        cursor:           pointer;
+
+        &:hover, &.active
+        {
+            background-color: #db0032;
+        }
+
+    } // li
+
+} // .slider__pager
+
+@mixin slider-direction-base
+{
+    @include pos-abs( null, null, null, null, 2 );
+    @include size( 38px, 38px );
+
+    background-color: #db0032;
+    cursor:           pointer;
+    fill:             #fff;
+    display:          flex;
+    align-items:      center;
+    justify-content:  center;
+
+    svg
+    {
+        @include size( 11px, 19px );
+
+    } // svg
+
+} // @mixin slider-direction-base
+
+.slider__direction-prev
+{
+    @include slider-direction-base;
+
+    right:  49px;
+    bottom: 10px;
+
+    svg
+    {
+        transform-origin: 50% 50%;
+        transform:        rotate3d( 0, 0, 1, 180deg );
+
+    } // svg
+
+} // .slider__direction-prev
+
+.slider__direction-next
+{
+    @include slider-direction-base;
+
+    right:  10px;
+    bottom: 10px;
+
+} // .slider__direction-next
+
+.slider__direction--disabled
+{
+    svg
+    {
+        opacity: 0.3;
+
+    } // svg
+
+} // .slider__direction--disabled

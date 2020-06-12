@@ -1,0 +1,62 @@
+
+$block-3lines-color1: #14b0e2;
+$block-3lines-color2: #c4d60b;
+$block-3lines-color3: #db0032;
+
+.block-3lines
+{
+    @include size( 100%, 3px );
+
+    display:         flex;
+    align-items:     stretch;
+    align-content:   stretch;
+    justify-content: stretch;
+
+} // .block-3lines
+
+.block-3lines__left
+{
+    flex:             1 1 auto;
+    background-color: $block-3lines-color1;
+
+} // .block-3lines__left
+
+.block-3lines__center
+{
+    flex:            0 0 $page-def-width;
+    display:         flex;
+    align-items:     stretch;
+    align-content:   stretch;
+    justify-content: stretch;
+
+} // .block-3lines__center
+
+.block-3lines__right
+{
+    flex:             1 1 auto;
+    background-color: $block-3lines-color3;
+
+} // .block-3lines__right
+
+.block-3lines__cola
+{
+    @include size( 23.43% );
+
+    background-color: $block-3lines-color1;
+
+} // .block-3lines__cola
+
+.block-3lines__colb
+{
+    @include size( 25.53% );
+
+    background-color: $block-3lines-color2;
+
+} // .block-3lines__colb
+
+.block-3lines__colc
+{
+    flex:             1 1 auto;
+    background-color: $block-3lines-color3;
+
+} // .block-3lines__colc
