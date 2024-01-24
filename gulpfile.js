@@ -2,7 +2,7 @@
 const fsio        = require('fs');
 const gulp        = require('gulp');
 const del         = require('del');
-const gulp_sass   = require('gulp-sass');
+const gulp_sass   = require('gulp-sass')(require('sass'));
 const sass_glob   = require('gulp-sass-glob');
 const {series}    = require('gulp');
 const {watch}     = require('gulp');
@@ -61,8 +61,7 @@ function SetBuildType( build_type )
     {
         fsio.mkdirSync(`${build_type}/`);
     }
-    
-} // SetBuildType
+}
 
 
 function build_html()
@@ -76,41 +75,8 @@ function build_html()
 } // build_html
 
 
-function build_files()
-{
-    del( [ `${PATHs.DEST_FILES}*`, `!${PATHs.DEST_FILES}` ] );
-    
-    gulp.src( [ `${PATHs.SRC_MAIN}favicon.png` ] )
-        .pipe( gulp.dest( PATHs.DEST_MAIN ) );
-    
-    return gulp.src( [ `${PATHs.SRC_FILES}*` ] )
-        .pipe( gulp.dest( PATHs.DEST_FILES ) );
-    
-} // build_files
-
-
-function build_fonts()
-{
-    return gulp.src( [ `${PATHs.SRC_FONTS}*` ] )
-        .pipe( gulp.dest( PATHs.DEST_FONTS ) );
-    
-} // build_fonts
-
-
-function build_images()
-{
-    return gulp.src( [ `${PATHs.SRC_IMAGES}*` ] )
-        .pipe( gulp.dest( PATHs.DEST_IMAGES ) );
-    
-} // build_images
-
-
 function build_js()
 {
-    gulp.src( [ `${PATHs.SRC_SCRIPTS}svgxuse.min.js` ] ).pipe( gulp.dest( PATHs.DEST_SCRIPTS ) );
-    //gulp.src( [ `${PATHs.SRC_SCRIPTS}vue/vue.js`     ] ).pipe( gulp.dest( `${PATHs.DEST_SCRIPTS}vue/` ) );
-    //gulp.src( [ `${PATHs.SRC_SCRIPTS}vue/vue.min.js` ] ).pipe( gulp.dest( `${PATHs.DEST_SCRIPTS}vue/` ) );
-    
     return browserify({ entries: [ `${PATHs.SRC_SCRIPTS}main.js` ] })
         .transform(babelify.configure({ presets : ["@babel/preset-env"] }))
         .bundle()
@@ -119,44 +85,6 @@ function build_js()
         .pipe(gulp.dest( PATHs.DEST_SCRIPTS ));
     
 } // build_js
-
-
-function build_sprites_png()
-{
-    let sprite_data = gulp.src( `${PATHs.SRC_SPRITES_PNG}*` )
-        .pipe( spritesmith({
-            imgName:   'sprite.png',
-            cssName:   '_sprite.scss',
-            cssFormat: 'scss',
-            padding:   2,
-            imgPath:   '../images/sprite.png'
-        }));
-    let _sprite_img = sprite_data.img.pipe( gulp.dest( PATHs.DEST_IMAGES ) );
-    let _sprite_css = sprite_data.css.pipe( gulp.dest( PATHs.SRC_SCSS ) );
-        
-    return merge( _sprite_img, _sprite_css );
-    
-} // build_sprites_png
-
-function build_sprites_svg()
-{
-    //*
-    return gulp.src( `${PATHs.SRC_SPRITES_SVG}*.svg` )
-        .pipe(svg_sprite({
-                mode:
-                {
-                    stack:
-                    {
-                        sprite: "../sprite.svg"  //sprite file name
-                    },
-                    //view: true,
-                    example: true
-                }
-            }
-        ))
-        .pipe( gulp.dest( PATHs.DEST_IMAGES ) );//*/
-    
-} // build_sprites_svg
 
 
 function build_sass()
@@ -176,7 +104,10 @@ function gulp_server()
     gulp.src( `./${PATHs.DEST_HTML}` )
         .pipe(webserver({
             livereload: false,
+            //directoryListing: true,
             open: true,
+            //fallback: `index.html`
+            //path: `/${PATHs.DEST_HTML}index.html`
         }));
 
 } // gulp_server
@@ -192,20 +123,13 @@ function gulp_server_standalone()
 
 function build_watch()
 {
-    gulp.series( build_html, build_files, build_fonts, build_images, build_js, build_sprites_png, build_sprites_svg, build_sass, gulp_server )();
+    gulp.series( build_html, build_js, build_sass, gulp_server )();
 
     watch( [ `${PATHs.SRC_HTML}*.twig`, `${PATHs.SRC_HTML}partials/*.twig` ], build_html );
-    watch( `${PATHs.SRC_FILES}`,       build_files );
-    watch( `${PATHs.SRC_FONTS}`,       build_fonts );
-    watch( `${PATHs.SRC_IMAGES}`,      build_images );
     watch( `${PATHs.SRC_SCRIPTS}`,     build_js );
-    watch( `${PATHs.SRC_SPRITES_PNG}`, build_sprites_png );
-    watch( `${PATHs.SRC_SPRITES_SVG}`, build_sprites_svg );
     watch( `${PATHs.SRC_SCSS}`,        build_sass );
-
-    //gulp_server();
     
-} // build_watch
+} // build_watch_debug
 
 
 function build_watch_debug()

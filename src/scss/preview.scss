@@ -3,7 +3,7 @@
 @import "include-media";
 @import "vars";
 @import "utils";
-@import "blocks/*.scss";
+@import "blocks/*.scss"; 
 
 .content__main
 {
@@ -12,7 +12,7 @@
     min-height:       100vh;
     display:          flex;
     align-items:      center;
-    align-content:    center;
+    align-content:    center; 
     justify-content:  center;
     background-color: #ccc;
 
